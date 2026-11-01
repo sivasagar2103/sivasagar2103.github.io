@@ -14,6 +14,9 @@ Open <http://localhost:8000>.
 
 ```text
 ├── index.html
+├── projects.html              # Dedicated project portfolio
+├── blog.html                  # Dedicated writing page
+├── resources.html              # Dedicated curated resources page
 ├── assets/
 │   ├── siva-sagar-original.jpg  # Original uploaded portrait, preserved at source dimensions
 │   ├── siva-sagar-face.jpg      # Face-focused crop from the same photo
@@ -21,20 +24,26 @@ Open <http://localhost:8000>.
 │   └── favicon.svg
 ├── src/
 │   ├── data.js                 # Experience, skills, projects, blogs and resources
-│   ├── main.js                 # Rendering, navigation and reveal animations
+│   ├── main.js                 # Starts page features
+│   ├── render.js               # Renders data into page sections
+│   ├── navigation.js           # Mobile navigation and contact menu
+│   ├── search.js               # Search dialog and portfolio index
+│   ├── animations.js           # Scroll reveal behavior
 │   └── styles.css              # Theme, responsive layout and motion
 └── .github/workflows/pages.yml # GitHub Pages deployment
 ```
 
 ## Add content later
 
-Open `src/data.js` and append objects to the relevant array:
+For new content, open `src/data.js` and append objects to the relevant array:
 
 - `projects`: title, type, summary, highlights, stack, status and optional public link.
 - `blogs`: title, date, category, excerpt, read time and optional article link.
 - `resources`: title, kind, description and URL.
 
-The page automatically renders new entries. The initial blog and project are starter examples; replace their text and add real public URLs when ready. Do not list private company source code, confidential architecture or customer information.
+The relevant dedicated page and portfolio search automatically include new entries. Rendering, navigation, search and animations live in separate modules under `src/`; `src/main.js` only starts them. The initial blog and project are starter examples; replace their text and add real public URLs when ready. Do not list private company source code, confidential architecture or customer information.
+
+The header search button (or `⌘K` / `Ctrl+K`) searches experience, skills, projects, writing and resources. The contact menu offers email and LinkedIn, and the Resume links download `assets/resume.pdf`. The visual theme uses warm cream surfaces with olive accents and staggered scroll reveals; impact figures count up as they enter view. Reduced-motion preferences are respected.
 
 ## Profile links
 

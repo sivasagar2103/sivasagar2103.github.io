@@ -19,11 +19,21 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Siva Sagar home"><span class="mark">S</span><span> SIVA SAGAR</span></a>
+    <a class="wordmark" href="index.html" aria-label="Siva Sagar home"><span class="mark">S</span><span> SIVA SAGAR</span></a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="#resources">Resources</a><a href="#toolkit">Toolkit</a>
-      <a class="nav-cta" href="#contact">Let’s talk <span>↗</span></a>
+      <a href="#about">About</a><a href="#work">Experience</a><a href="projects.html">Projects</a><a href="blog.html">Writing</a><a href="resources.html">Resources</a><a href="#toolkit">Toolkit</a>
+      <a class="resume-nav" href="assets/resume.pdf" download>Resume ↓</a>
+      <button class="search-toggle" type="button" aria-label="Search this portfolio" title="Search (⌘K)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      </button>
+      <div class="connect-menu">
+        <button class="nav-cta connect-toggle" type="button" aria-expanded="false" aria-haspopup="true">Let’s connect <span>↗</span></button>
+        <div class="connect-options">
+          <a href="mailto:sivasagar2103@gmail.com"><small>EMAIL</small><strong>Send me a note ↗</strong></a>
+          <a href="https://www.linkedin.com/in/siva-sagar-47127224b/" target="_blank" rel="noreferrer"><small>LINKEDIN</small><strong>Message me there ↗</strong></a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -32,8 +42,8 @@
       <div class="hero-copy reveal">
         <div class="eyebrow"><span class="status-dot"></span> OPEN TO MEANINGFUL ENGINEERING CHALLENGES</div>
         <h1>Building systems<br/>that make <em>complexity</em><br/>feel simple.</h1>
-        <p class="hero-lede">I’m Siva Sagar — an Agentic AI & Backend Engineer focused on practical AI automation, dependable backend platforms and smarter cloud operations.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span>↓</span></a><a class="text-link" href="assets/resume.pdf" target="_blank" rel="noreferrer">View resume <span>↗</span></a></div>
+        <p class="hero-lede">I’m Siva Sagar. I turn messy, time-consuming problems into useful AI workflows and dependable backend systems that give people more room to do their best work.</p>
+        <div class="hero-actions"><a class="button button-primary" href="projects.html">Explore my work <span>↗</span></a><a class="text-link" href="assets/resume.pdf" download>Download resume <span>↓</span></a></div>
         <div class="hero-meta"><span>HYDERABAD, INDIA</span><span class="meta-line"></span><span>3+ YEARS EXPERIENCE</span></div>
       </div>
       <div class="hero-visual reveal">
@@ -41,7 +51,7 @@
         <div class="portrait-frame"><img src="assets/siva-sagar-original.jpg" alt="Siva Sagar standing in a traditional decorated venue" fetchpriority="high" /></div>
         <div class="float-card card-ai"><span class="card-icon">✳</span><span><b>Agentic AI</b><small>From workflow to action</small></span></div>
         <div class="float-card card-cloud"><span class="card-icon">⌘</span><span><b>Cloud & FinOps</b><small>Reliable. Observable. Efficient.</small></span></div>
-        <div class="visual-caption">ENGINEERING WITH INTENT <span>✳</span></div>
+        <div class="visual-caption">GOOD TOOLS GIVE PEOPLE TIME BACK <span>✳</span></div>
       </div>
       <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
     </section>
@@ -59,38 +69,20 @@
       <div id="experience-list" class="timeline"></div>
     </section>
 
-    <section class="projects section-wrap" id="projects">
-      <div class="section-kicker">03 / SELECTED PROJECTS</div>
-      <div class="section-heading"><h2>Ideas turned into<br/><em>working systems.</em></h2><p>A small, editable showcase. Add future case studies in the projects list inside <code>src/data.js</code>.</p></div>
-      <div id="project-list" class="content-grid"></div>
-    </section>
-
-    <section class="writing section-wrap" id="writing">
-      <div class="section-kicker">04 / NOTES & WRITING</div>
-      <div class="section-heading"><h2>Thinking out loud,<br/><em>one idea at a time.</em></h2><p>Short technical notes and longer explorations. Add a post when you publish it.</p></div>
-      <div id="blog-list" class="content-grid"></div>
-    </section>
-
-    <section class="resources section-wrap" id="resources">
-      <div class="section-kicker">05 / USEFUL RESOURCES</div>
-      <div class="section-heading"><h2>Things worth<br/><em>keeping close.</em></h2><p>References, tools and learning material that are useful in day-to-day engineering.</p></div>
-      <div id="resource-list" class="resource-list"></div>
-    </section>
-
     <section class="toolkit section-wrap" id="toolkit">
-      <div class="section-kicker">06 / MY TOOLKIT</div><div class="section-heading"><h2>The tools behind<br/><em>the outcomes.</em></h2><p>A working toolkit across application engineering, AI orchestration, cloud services and data infrastructure.</p></div>
+      <div class="section-kicker">03 / MY TOOLKIT</div><div class="section-heading"><h2>The tools behind<br/><em>the outcomes.</em></h2><p>A working toolkit across application engineering, AI orchestration, cloud services and data infrastructure.</p></div>
       <div id="skill-groups" class="skill-grid"></div>
     </section>
 
     <section class="education section-wrap" id="education">
-      <div class="section-kicker">07 / THE FOUNDATION</div><div class="education-grid">
+      <div class="section-kicker">04 / THE FOUNDATION</div><div class="education-grid">
         <div><h2>Learning is part<br/>of the <em>craft.</em></h2><p class="education-copy">A foundation in engineering, strengthened by hands-on product work and continuous learning in AI and distributed systems.</p></div>
         <div class="education-details"><article><span class="detail-label">EDUCATION</span><h3>Bachelor of Technology</h3><p>Electronics and Communication Engineering</p><p>Jawaharlal Nehru Technological University, Anantapur</p><small>2018 — 2022 <b>·</b> GPA 8.0 / 10.0</small></article><article><span class="detail-label">CERTIFICATION & RECOGNITION</span><h3>Oracle Agentic AI Foundations Associate</h3><p>Oracle University · July 2026</p><h3 class="award-title">Best Employee of the Quarter</h3><p>Heeddata India Private Limited · October 2023</p></article></div>
       </div>
     </section>
 
-    <section class="contact section-wrap" id="contact"><div class="section-kicker">08 / YOUR TURN</div><h2>Have a thoughtful<br/>problem to <em>solve?</em></h2><p>I’d be happy to talk about backend engineering, agentic AI, cloud platforms or a role where I can make a useful contribution.</p><a class="button button-primary" href="mailto:sivasagar2103@gmail.com">Start a conversation <span>↗</span></a><div class="contact-details"><a href="mailto:sivasagar2103@gmail.com">sivasagar2103@gmail.com</a><a href="tel:+919573724224">+91 95737 24224</a><a href="https://github.com/sivasagar2103" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/siva-sagar-47127224b/" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Hyderabad, India</span></div></section>
+    <section class="contact section-wrap" id="contact"><div class="section-kicker">05 / YOUR TURN</div><h2>Have a thoughtful<br/>problem to <em>solve?</em></h2><p>I’d be happy to talk about backend engineering, agentic AI, cloud platforms or a role where I can make a useful contribution.</p><a class="button button-primary" href="mailto:sivasagar2103@gmail.com">Start a conversation <span>↗</span></a><div class="contact-details"><a href="mailto:sivasagar2103@gmail.com">sivasagar2103@gmail.com</a><a href="tel:+919573724224">+91 95737 24224</a><a href="https://github.com/sivasagar2103" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/siva-sagar-47127224b/" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Hyderabad, India</span></div></section>
   </main>
-  <footer class="footer section-wrap"><a class="wordmark" href="#home"><span class="mark">S</span><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
+  <footer class="footer section-wrap"><a class="wordmark" href="index.html"><span class="mark">S</span><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
   <script type="module" src="src/main.js"></script>
 </body></html>

@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#101713" />
+  <meta name="theme-color" content="#f2efe3" />
   <meta name="description" content="Selected projects by Siva Sagar Kancham, focused on practical AI workflows and useful engineering." />
+  <link rel="canonical" href="https://sivasagar2103.github.io/siva-sagar-portfolio/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects | Siva Sagar Kancham" />
+  <meta property="og:description" content="Selected work in practical AI workflows, backend engineering and useful automation." />
+  <meta property="og:url" content="https://sivasagar2103.github.io/siva-sagar-portfolio/projects.html" />
+  <meta property="og:image" content="https://sivasagar2103.github.io/siva-sagar-portfolio/assets/siva-sagar-face.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projects | Siva Sagar Kancham" />
+  <meta name="twitter:description" content="Selected work in practical AI workflows, backend engineering and useful automation." />
+  <meta name="twitter:image" content="https://sivasagar2103.github.io/siva-sagar-portfolio/assets/siva-sagar-face.jpg" />
   <title>Projects | Siva Sagar Kancham</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="src/layout.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Siva Sagar home"><span class="mark">S</span><span> SIVA SAGAR</span></a>
+    <a class="wordmark" href="index.html" aria-label="Siva Sagar home"><span> SIVA SAGAR</span></a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html#about">About</a><a href="index.html#work">Experience</a><a href="projects.html" aria-current="page">Projects</a><a href="blog.html">Writing</a><a href="resources.html">Resources</a><a href="index.html#toolkit">Toolkit</a>
-      <a class="resume-nav" href="assets/resume.pdf" download>Resume ↓</a>
+      <a href="index.html#about">About</a><a href="index.html#work">Experience</a><a href="challenges.html">Challenges</a><a href="projects.html" aria-current="page">Projects</a><a href="blog.html">Writing</a><a href="index.html#toolkit">Toolkit</a>
+      <a class="resume-nav" href="resume.html">Resume</a>
       <button class="search-toggle" type="button" aria-label="Search this portfolio" title="Search (⌘K)">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
       </button>
@@ -32,7 +44,7 @@
       </div>
     </nav>
   </header>
-  <main class="page-main section-wrap">
+  <main id="main-content" class="page-main section-wrap">
     <div class="page-heading reveal">
       <div class="section-kicker">SELECTED PROJECTS</div>
       <h1>Small ideas.<br/><em>Useful outcomes.</em></h1>
@@ -44,10 +56,10 @@
     </section>
     <nav class="page-switcher" aria-label="More portfolio pages">
       <a href="blog.html"><span>UP NEXT</span><strong>Notes & writing ↗</strong></a>
-      <a href="resources.html"><span>ALSO HERE</span><strong>Useful resources ↗</strong></a>
+      <a href="challenges.html"><span>ALSO HERE</span><strong>Challenges & decisions ↗</strong></a>
     </nav>
   </main>
-  <footer class="footer section-wrap"><a class="wordmark" href="index.html"><span class="mark">S</span><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
+  <footer class="footer section-wrap"><a class="wordmark" href="index.html"><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
   <script type="module" src="src/main.js"></script>
 </body>
 </html>

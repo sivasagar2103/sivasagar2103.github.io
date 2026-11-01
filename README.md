@@ -1,71 +1,81 @@
 # Siva Sagar — Portfolio
 
-A responsive, modular personal portfolio built with semantic HTML, CSS and vanilla JavaScript (ES modules). No framework, package install or build step is required.
+Static HTML, CSS and JavaScript, with Markdown content. No backend or API keys required.
 
-## Run locally
+## 1. Run locally
+
+Install Node.js 22+ and Python 3, then run from this folder:
 
 ```bash
-python3 -m http.server 8000
+npm ci
+npm run preview
 ```
 
-Open <http://localhost:8000>.
+Open http://localhost:8000. After edits, stop with `Ctrl+C`, run `npm run preview` again, and refresh. Preview serves the generated `dist/` folder; edit source files, not `dist/`.
 
-## Structure
+## 2. Update content
 
-```text
-├── index.html
-├── projects.html              # Dedicated project portfolio
-├── blog.html                  # Dedicated writing page
-├── resources.html              # Dedicated curated resources page
-├── assets/
-│   ├── siva-sagar-original.jpg  # Original uploaded portrait, preserved at source dimensions
-│   ├── siva-sagar-face.jpg      # Face-focused crop from the same photo
-│   ├── resume.pdf
-│   └── favicon.svg
-├── src/
-│   ├── data.js                 # Experience, skills, projects, blogs and resources
-│   ├── main.js                 # Starts page features
-│   ├── render.js               # Renders data into page sections
-│   ├── navigation.js           # Mobile navigation and contact menu
-│   ├── search.js               # Search dialog and portfolio index
-│   ├── animations.js           # Scroll reveal behavior
-│   └── styles.css              # Theme, responsive layout and motion
-└── .github/workflows/pages.yml # GitHub Pages deployment
+1. Open the relevant file below.
+2. Edit an existing file. To add a challenge, project or article, copy its folder and update the new `README.md`. For experience and skills, copy an object in the data array.
+3. Run `npm run preview` and check the result.
+
+| Content | Edit here |
+| --- | --- |
+| Intro, about, education, contact | `index.html` |
+| Experience | `src/sections/experience/data.js` |
+| Projects | `content/projects/<project-name>/README.md` |
+| Challenges and timelines | `content/challenges/<challenge-name>/README.md` |
+| Writing | `content/blog/<article-name>/README.md` |
+| Skills | `src/sections/toolkit/data.js` |
+| Resume | Replace `assets/resume.pdf` (keep the filename) |
+| Colors | `src/styles.css` |
+| Global spacing, headings and alignment | `src/layout.css` (tokens at the top) |
+| About animation | Copy in `index.html`; timing in `src/layout.css`; behavior in `src/principles.js` |
+| Favicon | `assets/favicon.svg` |
+
+**Challenges currently contains an illustrative example. Replace its scenario, timeline, actions and result with your real story.**
+
+The header’s Resume link opens `resume.html`, with an embedded PDF and a browser fallback. Portfolio search uses the section data and Markdown stories. Edit introductory search summaries in `src/search.js` when changing static profile copy.
+
+## 3. Add a challenge, project or article
+
+1. Create a folder inside `content/challenges/`, `content/projects/` or `content/blog/`.
+2. Add a `README.md` inside it (for example, `content/challenges/my-story/README.md` becomes `challenges/my-story/`).
+3. Use this format:
+
+```markdown
+---
+title: "My article"
+date: "2026-11-01"
+category: "Engineering"
+excerpt: "One sentence about the article."
+---
+
+Write your article here using Markdown.
 ```
 
-## Add content later
+4. Rebuild with `npm run preview`. Story pages, cards, search and sitemap update automatically. Use `draft: true` to hide a draft.
 
-For new content, open `src/data.js` and append objects to the relevant array:
+Writing requires `date`; projects and challenges may omit it. They also support `timeline: "2 weeks"`, `status`, and `stack: [Python, MCP]`. Each content folder has a short editing guide. Its top-level README is not published. Do not edit `posts.generated.js` or the section data wrappers; the Markdown files are the content source.
 
-- `projects`: title, type, summary, highlights, stack, status and optional public link.
-- `blogs`: title, date, category, excerpt, read time and optional article link.
-- `resources`: title, kind, description and URL.
+## 4. Publish with GitHub Pages
 
-The relevant dedicated page and portfolio search automatically include new entries. Rendering, navigation, search and animations live in separate modules under `src/`; `src/main.js` only starts them. The initial blog and project are starter examples; replace their text and add real public URLs when ready. Do not list private company source code, confidential architecture or customer information.
+1. Create a GitHub repository named `siva-sagar-portfolio` under `sivasagar2103`.
+2. Push **this folder's contents** to its `main` branch; `package.json` and `.github/` must be at the repository root.
+3. In GitHub, open **Settings → Pages → Source → GitHub Actions**.
+4. Open **Actions** and wait for **Deploy portfolio** to succeed.
+5. Visit https://sivasagar2103.github.io/siva-sagar-portfolio/.
+6. For later updates, edit, preview, commit and push to `main`; the workflow redeploys automatically.
 
-The header search button (or `⌘K` / `Ctrl+K`) searches experience, skills, projects, writing and resources. The contact menu offers email and LinkedIn, and the Resume links download `assets/resume.pdf`. The visual theme uses warm cream surfaces with olive accents and staggered scroll reveals; impact figures count up as they enter view. Reduced-motion preferences are respected.
+For a different repository name or domain, update `siteUrl` in `scripts/build.mjs`, page canonical/social URLs, and `robots.txt`. The build generates `dist/sitemap.xml`. Never commit credentials or private work details.
 
-## Profile links
+## 5. Verify before pushing
 
-- GitHub: https://github.com/sivasagar2103
-- LinkedIn: https://www.linkedin.com/in/siva-sagar-47127224b/
+```bash
+npm run build
+npm run check
+```
 
-## Publish on GitHub Pages
+Also preview on desktop and mobile: check navigation, search (`Ctrl+K` / `⌘K`), resume PDF, article links and contact links. Browser PDF support varies; the resume page includes an open-PDF link.
 
-1. Create a **public** repository named `siva-sagar-portfolio` under `sivasagar2103`.
-2. Upload/push the contents of this folder to the repository root (not the parent folder).
-3. Open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-4. The included workflow deploys on every push to `main`. Check the **Actions** tab for the deployment result.
-5. Once deployment succeeds, the expected project-site URL is:
-   `https://sivasagar2103.github.io/siva-sagar-portfolio/`
-
-GitHub Pages sites are public. Review the repository contents before publishing and keep credentials, private work details and confidential files out of it.
-
-## Recruiter-ready links
-
-After the Pages deployment succeeds, use the verified live URL in:
-- LinkedIn → Contact info / Featured section
-- Resume header beside GitHub and LinkedIn
-- Email signature and recruiter messages
-
-The expected URL above is not live until the repository is created and the first deployment succeeds.
+`dist/` and `node_modules/` are generated and ignored. Both portrait files are used by the site and are retained.

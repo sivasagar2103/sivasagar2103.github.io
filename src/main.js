@@ -1,3 +1,4 @@
+import { initPrinciples } from './principles.js';
 import { renderPortfolioContent } from './render.js';
 import { initNavigation } from './navigation.js';
 import { initSearch } from './search.js';
@@ -7,6 +8,7 @@ renderPortfolioContent();
 initNavigation();
 initSearch();
 initRevealAnimations();
+initPrinciples();
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();

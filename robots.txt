@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sivasagar2103.github.io/siva-sagar-portfolio/sitemap.xml

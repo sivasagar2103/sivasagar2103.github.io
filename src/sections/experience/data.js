@@ -1,4 +1,3 @@
-// Keep portfolio content here so updates don't require editing layout components.
 export const experience = [
   {
     role: 'Engineer — Products (dZSuite)', company: 'Digi Edze Soft Solutions', location: 'Hyderabad, India', period: 'JAN 2026 — PRESENT', current: true,
@@ -32,55 +31,5 @@ export const experience = [
       'Optimised backend workflows and API performance for high concurrency and large-scale data processing.',
       'Engineered 20+ REST APIs with Spring Boot MVC.'
     ], tags: ['Java', 'Spring Boot', 'REST APIs', 'Cloud SDKs']
-  }
-];
-
-export const skillGroups = [
-  { name: 'Languages', items: ['Python 3', 'Java'] },
-  { name: 'Backend & APIs', items: ['FastAPI', 'SQLAlchemy', 'REST APIs', 'PyMongo'] },
-  { name: 'Agentic AI & LLM', items: ['LangChain', 'LangGraph', 'FastMCP', 'MCP', 'Microsoft Foundry', 'OpenAI'] },
-  { name: 'Cloud & DevOps', items: ['AWS / boto3', 'Azure SDK', 'Docker', 'Docker Compose', 'Kubernetes'] },
-  { name: 'Data & Messaging', items: ['MySQL', 'MongoDB', 'ClickHouse', 'Redis', 'RabbitMQ'] },
-  { name: 'Observability & Tools', items: ['OpenTelemetry', 'Git', 'GitHub', 'Postman', 'Kombu', 'aio-pika'] }
-];
-
-// Add projects here. Keep links empty until a public demo or source repository is available.
-export const projects = [
-  {
-    title: 'Agentic Cloud Operations Assistant',
-    type: 'REFERENCE PROJECT · ENTERPRISE AUTOMATION',
-    summary: 'An agent-based workflow concept for investigating cloud operations requests, selecting relevant tools and routing high-impact actions through human approval.',
-    highlights: ['Intent-led task routing', 'MCP tool integration', 'Human approval for risky actions'],
-    stack: ['Python', 'LangGraph', 'FastMCP', 'MCP'],
-    status: 'Experience highlight',
-    link: ''
-  }
-];
-
-// Add published posts here. The sample is a short starter note, not a claim of a published article.
-export const blogs = [
-  {
-    title: 'Why agentic workflows need clear tool boundaries',
-    date: 'STARTER NOTE',
-    category: 'Agentic AI',
-    excerpt: 'A useful agent is not one that can call every tool. It is one that knows which tool is appropriate, what context it needs and when a person should approve the next step.',
-    readTime: '2 min read',
-    link: ''
-  }
-];
-
-// Curated resource examples; replace or extend with links you personally recommend.
-export const resources = [
-  {
-    title: 'Model Context Protocol',
-    kind: 'DOCUMENTATION',
-    description: 'A reference point for understanding how AI applications connect to external tools and context.',
-    url: 'https://modelcontextprotocol.io/'
-  },
-  {
-    title: 'LangGraph documentation',
-    kind: 'LEARNING',
-    description: 'Explore stateful, controllable agent workflows and orchestration patterns.',
-    url: 'https://docs.langchain.com/oss/python/langgraph/overview'
   }
 ];

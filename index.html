@@ -3,27 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#101713" />
+  <meta name="theme-color" content="#f2efe3" />
   <meta name="description" content="Siva Sagar Kancham — Agentic AI & Backend Engineer building enterprise automation, cloud-native platforms and FinOps systems." />
+  <link rel="canonical" href="https://sivasagar2103.github.io/siva-sagar-portfolio/" />
   <meta property="og:title" content="Siva Sagar Kancham — Agentic AI & Backend Engineer" />
   <meta property="og:description" content="Building useful AI systems, reliable backend platforms and smarter cloud operations." />
-  <meta property="og:image" content="assets/siva-sagar-face.jpg" />
+  <meta property="og:url" content="https://sivasagar2103.github.io/siva-sagar-portfolio/" />
+  <meta property="og:image" content="https://sivasagar2103.github.io/siva-sagar-portfolio/assets/siva-sagar-face.jpg" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Siva Sagar Kancham — Agentic AI & Backend Engineer" />
+  <meta name="twitter:description" content="Building useful AI systems, reliable backend platforms and smarter cloud operations." />
+  <meta name="twitter:image" content="https://sivasagar2103.github.io/siva-sagar-portfolio/assets/siva-sagar-face.jpg" />
   <title>Siva Sagar Kancham | Agentic AI & Backend Engineer</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="src/layout.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Siva Sagar Kancham",
+      "jobTitle": "Agentic AI & Backend Engineer",
+      "url": "https://sivasagar2103.github.io/siva-sagar-portfolio/",
+      "image": "https://sivasagar2103.github.io/siva-sagar-portfolio/assets/siva-sagar-face.jpg",
+      "sameAs": [
+        "https://github.com/sivasagar2103",
+        "https://www.linkedin.com/in/siva-sagar-47127224b/"
+      ]
+    }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Siva Sagar home"><span class="mark">S</span><span> SIVA SAGAR</span></a>
+    <a class="wordmark" href="index.html" aria-label="Siva Sagar home"><span> SIVA SAGAR</span></a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Experience</a><a href="projects.html">Projects</a><a href="blog.html">Writing</a><a href="resources.html">Resources</a><a href="#toolkit">Toolkit</a>
-      <a class="resume-nav" href="assets/resume.pdf" download>Resume ↓</a>
+      <a href="#about">About</a><a href="#work">Experience</a><a href="challenges.html">Challenges</a><a href="projects.html">Projects</a><a href="blog.html">Writing</a><a href="#toolkit">Toolkit</a>
+      <a class="resume-nav" href="resume.html">Resume</a>
       <button class="search-toggle" type="button" aria-label="Search this portfolio" title="Search (⌘K)">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
       </button>
@@ -37,13 +59,13 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero section-wrap" id="home">
       <div class="hero-copy reveal">
         <div class="eyebrow"><span class="status-dot"></span> OPEN TO MEANINGFUL ENGINEERING CHALLENGES</div>
         <h1>Building systems<br/>that make <em>complexity</em><br/>feel simple.</h1>
-        <p class="hero-lede">I’m Siva Sagar. I turn messy, time-consuming problems into useful AI workflows and dependable backend systems that give people more room to do their best work.</p>
-        <div class="hero-actions"><a class="button button-primary" href="projects.html">Explore my work <span>↗</span></a><a class="text-link" href="assets/resume.pdf" download>Download resume <span>↓</span></a></div>
+        <p class="hero-lede">I am Siva Sagar. I turn messy, time-consuming problems into useful AI workflows and dependable backend systems that give people more room to do their best work.</p>
+        <div class="hero-actions"><a class="button button-primary" href="projects.html">Explore my work <span>↗</span></a><a class="text-link" href="challenges.html">Explore challenges <span>↗</span></a></div>
         <div class="hero-meta"><span>HYDERABAD, INDIA</span><span class="meta-line"></span><span>3+ YEARS EXPERIENCE</span></div>
       </div>
       <div class="hero-visual reveal">
@@ -58,7 +80,26 @@
 
     <section class="intro section-wrap" id="about">
       <div class="section-kicker">01 / A LITTLE ABOUT ME</div>
-      <div class="intro-content"><h2>Good engineering is more than making things work. It’s making them <em>useful, scalable and clear.</em></h2><div class="intro-note"><p>I work across the backend and AI layers — turning operational problems into maintainable services, grounded agent workflows and production-ready platforms.</p><p>My approach is practical: understand the problem, design for the real world, and keep reliability and people in the loop.</p><img class="about-face" src="assets/siva-sagar-face.jpg" alt="Face portrait of Siva Sagar" loading="lazy"/></div></div>
+      <div class="intro-content">
+        <div class="about-story">
+          <h2>Simple where possible.<br/><em>Rigorous where it matters.</em></h2>
+          <div class="about-copy">
+            <p class="about-statement">I am a backend and AI engineer who builds services, intelligent agent workflows, and platforms that turn complex technical and operational problems into systems, teams can rely on.</p>
+            <p class="intro-note">Good engineering is more than making something work. It’s understanding the problem well enough to build something that holds up as requirements grow and change. I keep designs simple where I can, plan ahead where I must, and make deliberate trade-offs around reliability, scalability, and maintainability.</p>
+            <p class="intro-note about-closing">The goal is always the same: Technology that solves the problem in front of it and leaves room for what comes next.</p>
+          </div>
+        </div>
+        <div class="principles" aria-label="My engineering principles">
+          <div class="principles-heading"><span class="section-kicker">HOW I BUILD</span><button class="principles-replay" type="button" hidden>Replay <span aria-hidden="true">↻</span></button></div>
+          <ol class="principles-list">
+            <li style="--step:0"><span class="principle-number" aria-hidden="true">01</span><div><h3><span>Clear</span> <span>in</span> <span>design.</span></h3><p>Make the intent easy to understand.</p></div></li>
+            <li style="--step:1"><span class="principle-number" aria-hidden="true">02</span><div><h3><span>Reliable</span> <span>in</span> <span>execution.</span></h3><p>Build trust into the way things run.</p></div></li>
+            <li style="--step:2"><span class="principle-number" aria-hidden="true">03</span><div><h3><span>Efficient</span> <span>at</span> <span>scale.</span></h3><p>Use resources with purpose.</p></div></li>
+            <li style="--step:3"><span class="principle-number" aria-hidden="true">04</span><div><h3><span>Adaptable</span> <span>to</span> <span>change.</span></h3><p>Leave room for what comes next.</p></div></li>
+          </ol>
+          <p class="principles-caption"><span aria-hidden="true">↳</span> Clear intent. Dependable systems. Lasting value.</p>
+        </div>
+      </div>
       <div class="focus-grid"><article><span>01</span><h3>Agentic systems</h3><p>Tool-using workflows, orchestration, MCP services and human approval for high-impact actions.</p></article><article><span>02</span><h3>Backend engineering</h3><p>APIs, authentication, multi-tenancy, distributed workers and data-intensive services.</p></article><article><span>03</span><h3>Cloud intelligence</h3><p>Multi-cloud governance, cost optimisation, observability and operational automation.</p></article></div>
     </section>
 
@@ -83,6 +124,6 @@
 
     <section class="contact section-wrap" id="contact"><div class="section-kicker">05 / YOUR TURN</div><h2>Have a thoughtful<br/>problem to <em>solve?</em></h2><p>I’d be happy to talk about backend engineering, agentic AI, cloud platforms or a role where I can make a useful contribution.</p><a class="button button-primary" href="mailto:sivasagar2103@gmail.com">Start a conversation <span>↗</span></a><div class="contact-details"><a href="mailto:sivasagar2103@gmail.com">sivasagar2103@gmail.com</a><a href="tel:+919573724224">+91 95737 24224</a><a href="https://github.com/sivasagar2103" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/siva-sagar-47127224b/" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Hyderabad, India</span></div></section>
   </main>
-  <footer class="footer section-wrap"><a class="wordmark" href="index.html"><span class="mark">S</span><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
+  <footer class="footer section-wrap"><a class="wordmark" href="index.html"><span> SIVA SAGAR</span></a><span>Designed with clarity. Built with care.</span><span>© <span id="year"></span> Siva Sagar Kancham</span></footer>
   <script type="module" src="src/main.js"></script>
 </body></html>

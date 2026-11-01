@@ -28,10 +28,12 @@ export const initNavigation = () => {
     connectOptions?.classList.remove('is-open');
   });
 
-  connectButton?.addEventListener('keydown', event => {
+  document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
-    connectButton.setAttribute('aria-expanded', 'false');
+    nav?.classList.remove('is-open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    connectButton?.setAttribute('aria-expanded', 'false');
     connectOptions?.classList.remove('is-open');
-    connectButton.focus();
+    if (document.activeElement?.closest('.connect-menu')) connectButton?.focus();
   });
 };

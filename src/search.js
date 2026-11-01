@@ -1,10 +1,18 @@
-import { experience, skillGroups, projects, blogs, resources } from './data.js';
+import { challenges } from './sections/challenges/data.js';
+import { experience } from './sections/experience/data.js';
+import { skillGroups } from './sections/toolkit/data.js';
+import { projects } from './sections/projects/data.js';
+import { blogs } from './sections/writing/data.js';
+import { escapeHtml } from './sections/shared/render-utils.js';
 
-const searchEntries = [
+export const searchEntries = [
+  { title: "Resume", category: "Career", detail: "Read Siva Sagar’s resume and career overview.", href: "resume.html" },
+  { title: "Contact Siva Sagar", category: "Contact", detail: "Email: sivasagar2103@gmail.com. Based in Hyderabad, India. GitHub: sivasagar2103.", href: "index.html#contact" },
+  ...challenges.map(item => ({ title: item.title, category: "Challenge", detail: `${item.timeline} ${item.excerpt} ${item.searchText}`, href: item.link })),
   {
     title: 'About and engineering approach',
     category: 'About',
-    detail: 'Practical engineering, useful AI automation, maintainable services, dependable backend platforms, reliability, and keeping people in the loop.',
+    detail: 'Simple where possible. Rigorous where it matters. Backend and AI engineering: services, intelligent agent workflows and platforms teams can rely on. Deliberate trade-offs around reliability, scalability and maintainability, with room for requirements to grow and change.',
     href: 'index.html#about'
   },
   {
@@ -46,22 +54,15 @@ const searchEntries = [
   ...projects.map(project => ({
     title: project.title,
     category: 'Project',
-    detail: `${project.summary} ${project.stack.join(' ')}`,
-    href: 'projects.html'
+    detail: `${project.excerpt} ${project.searchText} ${project.stack.join(' ')}`,
+    href: project.link
   })),
   ...blogs.map(post => ({
     title: post.title,
     category: 'Writing',
-    detail: `${post.category} ${post.excerpt}`,
-    href: 'blog.html'
+    detail: `${post.category} ${post.excerpt} ${post.searchText}`,
+    href: post.link || 'blog.html'
   })),
-  ...resources.map(resource => ({
-    title: resource.title,
-    category: 'Resource',
-    detail: `${resource.kind} ${resource.description}`,
-    href: 'resources.html',
-    externalHref: resource.url
-  }))
 ];
 
 const normalize = value => value.toLocaleLowerCase().trim();
@@ -81,10 +82,10 @@ export const initSearch = () => {
       </div>
       <label class="search-field">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
-        <input type="search" placeholder="Try “FastAPI”, “agentic AI”, or “cloud”" autocomplete="off" />
+        <input aria-label="Search portfolio" type="search" placeholder="Try “FastAPI”, “agentic AI”, or “cloud”" autocomplete="off" />
         <kbd>ESC</kbd>
       </label>
-      <p class="search-hint">Search projects, notes, experience, skills and resources.</p>
+      <p class="search-hint">Search challenges, projects, writing, experience and skills.</p>
       <div class="search-results" aria-label="Search results">
         <p class="search-empty">Start typing to explore the portfolio.</p>
       </div>
@@ -114,8 +115,8 @@ export const initSearch = () => {
     }
 
     results.innerHTML = matches.map(entry => `
-      <a class="search-result" href="${entry.externalHref || entry.href}" ${entry.externalHref ? 'target="_blank" rel="noreferrer"' : ''}>
-        <span><small>${entry.category}</small><strong>${entry.title}</strong><em>${entry.detail.slice(0, 150)}${entry.detail.length > 150 ? '…' : ''}</em></span>
+      <a class="search-result" href="${escapeHtml(entry.href)}">
+        <span><small>${escapeHtml(entry.category)}</small><strong>${escapeHtml(entry.title)}</strong><em>${escapeHtml(entry.detail.slice(0, 150))}${entry.detail.length > 150 ? '…' : ''}</em></span>
         <b aria-hidden="true">↗</b>
       </a>`).join('');
   };

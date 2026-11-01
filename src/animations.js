@@ -1,7 +1,7 @@
 export const initRevealAnimations = () => {
   const revealItems = document.querySelectorAll(
-    '.reveal, .section-kicker, .intro-content, .focus-grid article, .impact-grid strong, ' +
-    '.section-heading, .timeline-item, .skill-card, .content-card, .resource-row, ' +
+    '.reveal, .section-kicker, .focus-grid article, .impact-grid strong, ' +
+    '.section-heading, .timeline-item, .skill-card, .content-card, ' +
     '.education-grid, .contact > h2, .page-switcher a'
   );
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
